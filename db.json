@@ -1,7 +1,7 @@
 {
   "diary-entries": [
     {
-      "id": 1,
+      "id": "1",
       "title": "My First Entry",
       "content": "Today I started my new diary. I'm excited to begin this journey of documenting my thoughts and experiences.",
       "date": "2024-07-16",
@@ -9,7 +9,7 @@
       "weatherStatus": "sunny"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "A Day at the Park",
       "content": "Spent a wonderful day at the park with my family. The weather was perfect and we had a great picnic.",
       "date": "2024-07-17",
@@ -17,7 +17,7 @@
       "weatherStatus": "sunny"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Work Update",
       "content": "Had a productive day at work. Completed a major project ahead of schedule.",
       "date": "2024-07-16",
@@ -25,21 +25,20 @@
       "weatherStatus": "sunny"
     },
     {
-      "id": 4,
-      "title": "Evening Walk",
+      "id": "4",
+      "title": "Blessed Sabath",
       "content": "Went for a refreshing evening walk. The sunset was beautiful, and I felt very relaxed.",
       "date": "2024-07-18",
       "location": " ",
       "weatherStatus": "sunny"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Weekend Getaway",
       "content": "Had an amazing weekend getaway at the beach. Enjoyed the sun, sand, and sea.",
       "date": "2024-07-19",
       "location": "  ",
       "weatherStatus": "sunny"
-      
     }
   ]
 }

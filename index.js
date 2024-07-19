@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // declare my fetch endpoint
+
+    const fetchEndpoint = "http://localhost:3000/diary-entries";
 
     let dateTimeInput = document.querySelector("#dateTimeInput");
 
@@ -12,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const form = document.querySelector("#login-form");
-
     form.addEventListener("submit", (e) => {
         e.preventDefault(); // Prevent form submission
 
@@ -23,7 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let signInForm = document.querySelector("#login-form");
         let diaryEntryForm = document.querySelector("#hidden-div");
         if (userName === "abbot" && password === "12345") {
-            alert("Login Successful.");
+            fetch(fetchEndpoint)
+            .then((res) => res.json())
+            .then((data) =>
+                data.forEach(
+                    (diaryEntry) => getPost(diaryEntry)
+                )
+            );
+
+        let diaryEntryForm = document.querySelector("#hidden-div");
+        diaryEntryForm.style.display = "none";
         } else {
             alert("Incorrect! Enter a valid username and password.");
         }
@@ -38,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createPostButton.addEventListener("click", (e) => {
         let diaryEntryForm = document.querySelector("#hidden-div");
         diaryEntryForm.style.display = "block";
+
     })
     function getPost(object) {
         //  Add code here to display fetch
@@ -75,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
         postUpdateBtn.addEventListener("click", (e) => {
             const updatedPost = prompt("Enter new post Title: ");
             if (updatedPost) {
-                object.postTitle = updatedPost;
-                title.textContent = updatedPost;
+                object.title = updatedPost;
+                postTitle.textContent = updatedPost;
                 updatePost(object);
             }
         })
@@ -86,24 +98,60 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
     };
+    // create a function DELETE
+    function deletePost(id) {
+        fetch(`http://localhost:3000/diary-entries/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(res => res.json())
 
-    const fetchEndpoint = "http://localhost:3000/diary-entries";
-    const viewPostBtn = document.querySelector("#view-post-button")
-    viewPostBtn.addEventListener("click", (e) => {
+    }
+    //   create a function UPDATE
+    function updatePost(object) {
+        fetch(`http://localhost:3000/diary-entries/${object.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(object)
+        })
+            .then(resp => resp.json())
+            .then(data => getPost(data))
+    }
 
-        
+       // create a function CREATE POST
+    function createPost(object) {
+        fetch(fetchEndpoint, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(object),
+        }).then((res) => res.json())
+            .then(data => getPost(object))
+    }
 
-        fetch(fetchEndpoint)
-            .then((res) => res.json())
-            .then((data) =>
-                data.forEach(
-                    (diaryEntry) => getPost(diaryEntry)
-                )
-            );
-        let diaryEntryForm = document.querySelector("#hidden-div");
-        diaryEntryForm.style.display = "none";
 
-    })
+    const submitPostBtn = document.querySelector("#submit-entry");
+    submitPostBtn.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const diaryEntry = {
+            title: document.querySelector("#title").value,
+            content: document.querySelector("#text-area").value,
+            date: document.querySelector("#dateTimeInput").value,
+            location: document.querySelector("#getLocation").value,
+            weatherStatus: document.querySelector("#weather-status-value").value,
+        };
+
+        // calling the createPost function
+        createPost(object);
+
+    });
+
+
     const getLocationButton = document.querySelector("#get-location-button");
     getLocationButton.addEventListener("click", (e) => {
         if (navigator.geolocation) {
