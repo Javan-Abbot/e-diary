@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login">
+        <h1 class="heading">e-Diary</h1>
+        <form action="" class="form" id="login-form">
+            <input required="" name="userName" id="user-name" class="input" placeholder="E-mail">
+            <input required="" name="password" id="password" class="input" placeholder="Password">
+            <span class="forgot-password"><a href="#">Forgot Password</a></span>
+            <input class="login-button" id="sign-in" type="submit" value="Sign In">
+        </form>
+        <br><br>
+
+        <div class="buttons">
+            <input class="button" id="create-post-button" type="submit" value="Create Post">
+            <input class="button" id="view-post-button" type="submit" value="View Posts">
+        </div>
+        <div id="hidden-div-fetch" class="hidden">
+            <!-- My output from the DOM goes here -->
+        </div>
+        <!-- create my hidden div here -->
+        <div id="hidden-div" class="hidden">
+            <!-- <label for="dateTimeInput">Date and Time</label> -->
+            <input type="datetime-local" id="dateTimeInput" name="dateTimeInput">
+
+            <form id="weather-status">
+                <label for="weather-status">Weather Status:</label>
+                <select class="weather-status-value" id="weather-status-value" name="weather-status">
+                    <option class="option" value="Sunny">Sunny</option>
+                    <option class="option" value="Rainy">Rainy</option>
+                    <option class="option" value="Cloudy">Cloudy</option>
+                </select>
+            </form>
+
+            <!-- create my location  -->
+            <button class="button" id="get-location-button">Get Location</button>
+            <input type="text" id="getLocation" name="getLocation" placeholder="Location">
+
+            <form action="" class="form-1" id="form-1">
+                <input required="" name="title" id="title" class="input-1" placeholder="Title">
+                <!-- <input required="" name="post-description" id="post-des" class="input-1"
+                    placeholder="Activity description"> -->
+                <textarea rows="10" cols="50" id="text-area" required="" placeholder="Post description">
+                </textarea>
+                <input class="submit-entry" id="submit-entry" type="submit" value="Submit_Entry">
+            </form>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

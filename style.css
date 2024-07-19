@@ -1,0 +1,242 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70%;
+    background: rgba(176, 176, 176, 0.9854);
+}
+
+.login {
+    max-width: 500px;
+    border-radius: 40px;
+    padding: 25px 35px;
+    border: 5px solid rgb(225, 225, 255);
+    box-shadow: lightskyblue;
+    margin: 20px;
+}
+
+.heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(95, 4, 117);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form {
+    margin-top: 10px;
+}
+
+.form .input {
+    width: 90%;
+    /* color: #000; */
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: lightgreen;
+    border-inline: 2px solid transparent;
+}
+
+/* .form .input:focus {
+    outline: none;
+    border-inline: px solid #12b1d1; */
+/* } */
+
+.form .forgot-password {
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.form .forgot-password a {
+    font-size: 16px;
+    color: #0400ff;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form .login-button {
+    display: block;
+    width: 30%;
+    font-weight: bold;
+    background: rgb(213, 245, 243);
+    color: black;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form .login-button:hover {
+    transform: scale(1.03);
+}
+
+.form .login-button:active {
+    transform: scale(0.98);
+}
+
+#hidden-div {
+    display: none;
+}
+.hidden-div-fetch {
+    display: none;
+    width: 400px;
+    height: 650px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+body #hidden-div {
+    width: 400px;
+    height: 650px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+.form-1 {
+    margin-top: 20px;
+}
+
+.form-1 .input-1 {
+    width: 90%;
+    /* color: #000; */
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: lightgreen;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.form-1 .submit-entry {
+    display: block;
+    width: 30%;
+    font-weight: bold;
+    background: rgb(213, 245, 243);
+    color: black;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+.form-1 .submit-entry:hover {
+    transform: scale(1.03);
+}
+
+.form-1 .submit-entry:active {
+    transform: scale(0.98);
+}
+#text-area {
+    width: 90%;
+    /* color: #000; */
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: lightgreen;
+    border-inline: 2px solid transparent;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+::placeholder {
+    color: #413a3a; 
+    font-family: 'Courier New', Courier, monospace;
+}
+#dateTimeInput {
+    width: 90%;
+    /* color: #000; */
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: lightgreen;
+}
+#getLocation {
+    width: 90%;
+    /* color: #000; */
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    /* box-shadow: lightgreen; */
+    font-family: 'Courier New', Courier, monospace;
+}
+.buttons {
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    display: none;
+}
+.button {
+    display: block;
+    width: 30%;
+    font-weight: bold;
+    background: rgb(213, 245, 243);
+    color: black;
+    padding-block: 15px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+.button:hover {
+    transform: scale(1.03);
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+#weather-status {
+    width: 90%;
+    /* color: #000; */
+    background: white;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+    /* box-shadow: lightgreen; */
+    font-family: 'Courier New', Courier, monospace;
+}
+.weather-status-value {
+    width: 30%;
+    /* color: #000; */
+    background: white;
+    border: none;
+    padding: 15px 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: lightgreen;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}

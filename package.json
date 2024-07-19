@@ -1,0 +1,19 @@
+{
+  "name": "e-diary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Javan-Abbot/e-diary.git"
+  },
+  "author": "javan abbot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Javan-Abbot/e-diary/issues"
+  },
+  "homepage": "https://github.com/Javan-Abbot/e-diary#readme"
+}
