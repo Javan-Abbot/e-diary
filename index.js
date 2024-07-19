@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = form.password.value;
         const buttonsDiv = document.querySelector(".buttons");
         let signInForm = document.querySelector("#login-form");
-        let diaryEntryForm = document.querySelector("#hidden-div");
         if (userName === "abbot" && password === "12345") {
             fetch(fetchEndpoint)
             .then((res) => res.json())
@@ -135,8 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    const submitPostBtn = document.querySelector("#submit-entry");
-    submitPostBtn.addEventListener("submit", (e) => {
+    const submitPostForm = document.querySelector("#hidden-div");
+    submitPostForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const diaryEntry = {
             title: document.querySelector("#title").value,
@@ -145,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
             location: document.querySelector("#getLocation").value,
             weatherStatus: document.querySelector("#weather-status-value").value,
         };
-
+        form.reset();
         // calling the createPost function
         createPost(object);
 

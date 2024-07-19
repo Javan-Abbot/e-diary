@@ -3,7 +3,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 70%;
-    background: rgb(248, 212, 212);
+    background: rgb(147, 155, 148);
 }
 
 .login {
@@ -13,6 +13,7 @@ body {
     border: 5px solid rgb(225, 225, 255);
     box-shadow: lightskyblue;
     margin: 20px;
+    background-color: #00785d;
 }
 
 .heading {
@@ -30,7 +31,7 @@ body {
 .form .input {
     width: 90%;
     /* color: #000; */
-    background: #00785d;
+    background: #abddd2;
     border: none;
     padding: 15px 20px;
     border-radius: 15px;
@@ -52,7 +53,7 @@ body {
 
 .form .forgot-password a {
     font-size: 16px;
-    color: #031957;
+    color: #000000;
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -80,6 +81,7 @@ body {
 
 #hidden-div {
     display: none;
+    
 }
 .hidden-div-fetch {
     display: none;
@@ -98,11 +100,11 @@ body {
 }
 
 body #hidden-div {
-    width: 400px;
+    width: 455px;
+    border: 1px solid #ccc;
     height: 650px;
     margin: 10px;
     padding: 10px;
-    border: 1px solid #00785d;
     border-radius: 10px;
     background-color: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -112,13 +114,8 @@ body #hidden-div {
     color: #333;
 }
 
-.form-1 {
-    margin-top: 20px;
-}
-
-.form-1 .input-1 {
+.input-1 {
     width: 90%;
-    /* color: #000; */
     background: #32bfdb;
     border: none;
     padding: 15px 20px;
@@ -128,7 +125,7 @@ body #hidden-div {
     font-family: 'Courier New', Courier, monospace;
 
 }
-.form-1 .submit-entry {
+#submit-entry {
     display: block;
     width: 30%;
     font-weight: bold;
@@ -186,7 +183,7 @@ body #hidden-div {
     font-family: 'Courier New', Courier, monospace;
 }
 .buttons {
-    width: 400px;
+    width: 455px;
     margin: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -206,10 +203,15 @@ body #hidden-div {
     background: rgb(213, 245, 243);
     color: black;
     padding-block: 15px;
-    margin: 10px auto;
+    margin: 20px auto;
     border-radius: 10px;
     border: none;
     font-family: 'Courier New', Courier, monospace;
+}
+#hidden-div-fetch {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
 }
 .button:hover {
     transform: scale(1.03);
