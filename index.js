@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const submitPostForm = document.querySelector("#hidden-div");
-    submitPostForm.addEventListener("submit", (e) => {
+    submitPostForm.addEventListener("click", (e) => {
         e.preventDefault();
         const diaryEntry = {
             title: document.querySelector("#title").value,

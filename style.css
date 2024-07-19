@@ -116,6 +116,7 @@ body #hidden-div {
 
 .input-1 {
     width: 90%;
+    /* color: #000; */
     background: #32bfdb;
     border: none;
     padding: 15px 20px;
@@ -137,11 +138,11 @@ body #hidden-div {
     border: none;
     font-family: 'Courier New', Courier, monospace;
 }
-.form-1 .submit-entry:hover {
+#submit-entry:hover {
     transform: scale(1.03);
 }
 
-.form-1 .submit-entry:active {
+#submit-entry:active {
     transform: scale(0.98);
 }
 #text-area {
@@ -200,7 +201,7 @@ body #hidden-div {
     display: block;
     width: 30%;
     font-weight: bold;
-    background: rgb(213, 245, 243);
+    background: #fdc323;
     color: black;
     padding-block: 15px;
     margin: 20px auto;
