@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const submitPostForm = document.querySelector("#hidden-div");
-    submitPostForm.addEventListener("click", (e) => {
+    submitPostForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const diaryEntry = {
             title: document.querySelector("#title").value,
@@ -144,10 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
             location: document.querySelector("#getLocation").value,
             weatherStatus: document.querySelector("#weather-status-value").value,
         };
-        form.reset();
         // calling the createPost function
-        createPost(object);
-
+        createPost(diaryEntry);
+        form.reset();
     });
 
 

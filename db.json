@@ -39,6 +39,14 @@
       "date": "2024-07-19",
       "location": "  ",
       "weatherStatus": "sunny"
+    },
+    {
+      "id": "902e",
+      "title": "title",
+      "content": "post",
+      "date": "2024-07-19T18:15",
+      "location": "Latitude: -1.2796691, Longitude: 36.9652191",
+      "weatherStatus": "Sunny"
     }
   ]
 }
